@@ -1,0 +1,14 @@
+[project]
+name = "agentcore-tutorial"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "bedrock-agentcore-starter-toolkit>=0.3.7",
+]
+
+[tool.uv.workspace]
+members = [
+    "agent_deployment",
+]

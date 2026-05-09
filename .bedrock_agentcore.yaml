@@ -1,0 +1,122 @@
+default_agent: agent_deployment_tutorial_agent
+agents:
+  agent_deployment_tutorial_agent:
+    name: agent_deployment_tutorial_agent
+    language: python
+    node_version: '20'
+    entrypoint: /Users/steveli/Documents/git/agentcore-tutorial/agent_deployment/tutorial_agent.py
+    deployment_type: container
+    runtime_type: null
+    platform: linux/arm64
+    container_runtime: none
+    source_path: /Users/steveli/Documents/git/agentcore-tutorial/agent_deployment
+    aws:
+      execution_role: arn:aws:iam::974346102733:role/AmazonBedrockAgentCoreSDKRuntime-us-east-1-854f686f2e
+      execution_role_auto_create: false
+      account: '974346102733'
+      region: us-east-1
+      ecr_repository: 974346102733.dkr.ecr.us-east-1.amazonaws.com/bedrock-agentcore-agent_deployment_tutorial_agent
+      ecr_auto_create: false
+      s3_path: null
+      s3_auto_create: false
+      network_configuration:
+        network_mode: PUBLIC
+        network_mode_config: null
+      protocol_configuration:
+        server_protocol: HTTP
+      observability:
+        enabled: true
+      lifecycle_configuration:
+        idle_runtime_session_timeout: null
+        max_lifetime: null
+    bedrock_agentcore:
+      agent_id: agent_deployment_tutorial_agent-C9LIKE750A
+      agent_arn: arn:aws:bedrock-agentcore:us-east-1:974346102733:runtime/agent_deployment_tutorial_agent-C9LIKE750A
+      agent_session_id: b6f453b2-02cd-4070-8040-d04035a89551
+    codebuild:
+      project_name: null
+      execution_role: null
+      source_bucket: null
+    memory:
+      mode: STM_AND_LTM
+      memory_id: agent_deployment_tutorial_agent_mem-3mmwa7HsTk
+      memory_arn: arn:aws:bedrock-agentcore:us-east-1:974346102733:memory/agent_deployment_tutorial_agent_mem-3mmwa7HsTk
+      memory_name: agent_deployment_tutorial_agent_mem
+      event_expiry_days: 30
+      first_invoke_memory_check_done: true
+      was_created_by_toolkit: true
+    identity:
+      credential_providers: []
+      workload: null
+    aws_jwt:
+      enabled: false
+      audiences: []
+      signing_algorithm: ES384
+      issuer_url: null
+      duration_seconds: 300
+    authorizer_configuration: null
+    request_header_configuration: null
+    oauth_configuration: null
+    api_key_env_var_name: null
+    api_key_credential_provider_name: null
+    is_generated_by_agentcore_create: false
+  tutorial_agent_with_memory:
+    name: tutorial_agent_with_memory
+    language: python
+    node_version: '20'
+    entrypoint: /Users/steveli/Documents/git/agentcore-tutorial/agent_deployment/tutorial_agent.py
+    deployment_type: container
+    runtime_type: null
+    platform: linux/arm64
+    container_runtime: none
+    source_path: /Users/steveli/Documents/git/agentcore-tutorial/agent_deployment
+    aws:
+      execution_role: arn:aws:iam::974346102733:role/AmazonBedrockAgentCoreSDKRuntime-us-east-1-97f79c4287
+      execution_role_auto_create: false
+      account: '974346102733'
+      region: us-east-1
+      ecr_repository: 974346102733.dkr.ecr.us-east-1.amazonaws.com/bedrock-agentcore-tutorial_agent_with_memory
+      ecr_auto_create: false
+      s3_path: null
+      s3_auto_create: false
+      network_configuration:
+        network_mode: PUBLIC
+        network_mode_config: null
+      protocol_configuration:
+        server_protocol: HTTP
+      observability:
+        enabled: true
+      lifecycle_configuration:
+        idle_runtime_session_timeout: null
+        max_lifetime: null
+    bedrock_agentcore:
+      agent_id: null
+      agent_arn: null
+      agent_session_id: null
+    codebuild:
+      project_name: null
+      execution_role: null
+      source_bucket: null
+    memory:
+      mode: STM_AND_LTM
+      memory_id: memory_2lqq2-8Nqtng3XiZ
+      memory_arn: null
+      memory_name: tutorial_agent_with_memory_memory
+      event_expiry_days: 30
+      first_invoke_memory_check_done: false
+      was_created_by_toolkit: false
+    identity:
+      credential_providers: []
+      workload: null
+    aws_jwt:
+      enabled: false
+      audiences: []
+      signing_algorithm: ES384
+      issuer_url: null
+      duration_seconds: 300
+    authorizer_configuration: null
+    request_header_configuration: null
+    oauth_configuration: null
+    api_key_env_var_name: null
+    api_key_credential_provider_name: null
+    is_generated_by_agentcore_create: false
